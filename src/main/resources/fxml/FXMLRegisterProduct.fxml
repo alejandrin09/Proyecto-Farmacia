@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.FXMLRegisterProductController">
+   <children>
+      <Label layoutX="148.0" layoutY="14.0" text="Registro de producto" textFill="#042b50">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProductName" layoutX="20.0" layoutY="68.0" prefHeight="26.0" prefWidth="201.0" promptText="Producto" style="-fx-background-color: #AAD6CD;" />
+      <DatePicker fx:id="expirationDate" layoutX="315.0" layoutY="219.0" promptText="Fecha de caducidad" style="-fx-background-color: #AAD6CD;" />
+      <ComboBox fx:id="comboBoxPresentation" layoutX="19.0" layoutY="169.0" prefHeight="26.0" prefWidth="178.0" promptText="Presentación" style="-fx-background-color: #AAD6CD;" />
+      <TextField fx:id="txtSize" layoutX="316.0" layoutY="68.0" prefHeight="26.0" prefWidth="174.0" promptText="Tamaño" style="-fx-background-color: #AAD6CD;" />
+      <ComboBox fx:id="comboBoxTypeProduct" layoutX="316.0" layoutY="117.0" onAction="#showTtxtOther" prefHeight="26.0" prefWidth="176.0" promptText="Tipo" style="-fx-background-color: #AAD6CD;" />
+      <CheckBox fx:id="boxAvailable" layoutX="182.0" layoutY="289.0" mnemonicParsing="false" selected="true" text="Disponible" />
+      <ComboBox fx:id="comboBoxSupplier" layoutX="20.0" layoutY="117.0" prefHeight="26.0" prefWidth="178.0" promptText="Proveedor" style="-fx-background-color: #AAD6CD;" />
+      <ComboBox fx:id="comboBoxSite" layoutX="316.0" layoutY="170.0" prefHeight="26.0" prefWidth="174.0" promptText="Sede" style="-fx-background-color: #AAD6CD;" />
+      <TextField fx:id="txtAmount" layoutX="20.0" layoutY="285.0" prefHeight="26.0" prefWidth="68.0" style="-fx-background-color: #AAD6CD;" />
+      <Label layoutX="95.0" layoutY="290.0" text="Existencia" />
+      <Button fx:id="registerProduct" layoutX="385.0" layoutY="286.0" mnemonicParsing="false" onAction="#registerProductOnAction" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: #36AB9C;" text="Registrar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField fx:id="txtOther" layoutX="19.0" layoutY="218.0" prefHeight="26.0" prefWidth="178.0" promptText="Otro:" style="-fx-background-color: #AAD6CD;" visible="false" />
+      <TextField fx:id="txtPrice" layoutX="286.0" layoutY="286.0" prefHeight="26.0" prefWidth="79.0" promptText="Precio" style="-fx-background-color: #AAD6CD;" />
+   </children>
+</AnchorPane>

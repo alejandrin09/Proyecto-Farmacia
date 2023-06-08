@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.uv.fei.gui.controller.FXMLHomeAdministratorController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="662.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80cc28" height="40.0" layoutX="-1.0" layoutY="33.0" opacity="0.72" stroke="#80cc28" strokeType="INSIDE" width="661.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80cc28" height="9.0" layoutY="25.0" stroke="#80cc28" strokeType="INSIDE" width="661.0" />
+            <Label layoutX="21.0" layoutY="41.0" text="Pharma Tech " textFill="#042b50">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="536.0" layoutY="43.0" text="Administrador">
+               <font>
+                  <Font name="Berlin Sans FB" size="18.0" />
+               </font>
+            </Label>
+            <MenuBar layoutX="88.0" layoutY="77.0" prefHeight="40.0" prefWidth="505.0" style="-fx-background-color: #36ab9c;" AnchorPane.bottomAnchor="372.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="77.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Administrar Empleados">
+                     <items>
+                        <MenuItem fx:id="btnRegisterEmpleado" mnemonicParsing="false" onAction="#btnRegisterEmpleado" text="Registrar" />
+                        <MenuItem fx:id="btnModifyEmpleado" mnemonicParsing="false" onAction="#btnModifyEmpleado" text="Modificar" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/lapiz-de-usuario.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Administrar Productos">
+                     <items>
+                        <MenuItem fx:id="btnRegisterMedicina" mnemonicParsing="false" onAction="#btnRegisterMedicina" text="Registrar" />
+                        
+                            
+                        
+                        <MenuItem fx:id="btnmodifyMedicina" mnemonicParsing="false" onAction="#btnmodifyMedicina" text="Modificar" />
+                        <MenuItem fx:id="btnDeleteMedicina" mnemonicParsing="false" onAction="#btnDeleteMedicina" text="Eliminar" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pastillas.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Adquisiciones">
+                     <items>
+                        <MenuItem fx:id="btnregisterAdquisicion" mnemonicParsing="false" onAction="#btnregisterAdquisicion" text="Registrar" />
+                        <MenuItem fx:id="btnModifyAdquisicion" mnemonicParsing="false" onAction="#btnModifyAdquisicion" text="Modificar" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/archivo-factura-dolar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <BorderPane fx:id="borderPane" layoutX="17.0" layoutY="107.0" prefHeight="382.0" prefWidth="627.0" />
+            <ImageView fx:id="btnBack" fitHeight="30.0" fitWidth="25.0" layoutX="633.0" layoutY="-1.0" onMouseClicked="#backOnClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8-cerrar-ventana-48.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

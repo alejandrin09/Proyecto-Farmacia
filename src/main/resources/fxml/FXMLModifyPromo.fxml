@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="660.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="mx.uv.fei.gui.controller.FXMLModifyPromoController">
+   <children>
+      <TableView fx:id="tableViewPromos" layoutX="30.0" layoutY="91.0" onMouseClicked="#selected" prefHeight="267.0" prefWidth="247.0">
+         <columns>
+            <TableColumn fx:id="columnPromo" prefWidth="234.00003051757812" text="Promoción " />
+         </columns>
+      </TableView>
+      <Label layoutX="30.0" layoutY="60.0" text="Selecciona una promoción: " textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#83cc29e8" height="32.0" layoutX="246.0" layoutY="18.0" stroke="#80cc28" strokeType="INSIDE" width="188.0" />
+      <Text fill="#042b50" layoutX="255.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Promoción">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#aad6cd" height="247.0" layoutX="315.0" layoutY="67.0" stroke="#aad6cd" strokeType="INSIDE" width="320.0" />
+      <Label layoutX="323.0" layoutY="83.0" text="Nombre:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="118.0" text="Descripción:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="190.0" text="T&amp;C:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="323.0" layoutY="256.0" text="Fecha inicio:" textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="328.0" layoutY="286.0" text="Fecha fin: " textFill="#042b50">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtName" layoutX="386.0" layoutY="78.0" prefHeight="25.0" prefWidth="234.0" />
+      <TextArea fx:id="txtTermsAndConditions" layoutX="386.0" layoutY="187.0" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: AAD6CD;" />
+      <TextArea fx:id="txtDescription" layoutX="386.0" layoutY="116.0" prefHeight="63.0" prefWidth="234.0" style="-fx-background-color: AAD6CD;" />
+      <DatePicker fx:id="datePickeRStartDate" layoutX="397.0" layoutY="251.0" prefHeight="25.0" prefWidth="217.0" />
+      <DatePicker fx:id="datePickerEndDate" layoutX="397.0" layoutY="281.0" prefHeight="25.0" prefWidth="217.0" />
+      <Button fx:id="btnModify" layoutX="329.0" layoutY="324.0" mnemonicParsing="false" onAction="#modifyPromo" style="-fx-background-color: #80cc28;" text="Modificar">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="487.0" layoutY="324.0" mnemonicParsing="false" onAction="#deletePromo" style="-fx-background-color: #80cc28;" text="Eliminar">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
